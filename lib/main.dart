@@ -1,6 +1,8 @@
 import 'package:e_fridge/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
+import 'pages/recipe_detail.dart';
+
 void main() {
   runApp(const MyApp());
 }

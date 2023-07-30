@@ -25,15 +25,18 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.green,
         child: const Icon(Icons.add),
       ),
-      body: ListView.builder(
-          shrinkWrap: true,
-          itemCount: dummyRecipeList.length,
-          itemBuilder: (context, index) {
-            return RecipeTile(
-              recipeName: dummyRecipeList[index].name,
-              recipePerson: dummyRecipeList[index].personnQuantity,
-            );
-          }),
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: dummyRecipeList.length,
+            itemBuilder: (context, index) {
+              return RecipeTile(
+                recipeName: dummyRecipeList[index].name,
+                recipePerson: dummyRecipeList[index].personnQuantity,
+              );
+            }),
+      ),
     );
   }
 }
