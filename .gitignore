@@ -45,4 +45,7 @@ app.*.map.json
 
 
 pubspec.lock
-/ios/
+/ios/Runner.xcodeproj/
+/ios/Runner.xcworkspace/
+/ios/Runner/
+/ios/RunnerTests/
