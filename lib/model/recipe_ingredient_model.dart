@@ -1,6 +1,8 @@
+import 'package:e_fridge/model/ingredient_model.dart';
+
 class RecipeIngredient {
   final String id;
-  final String ingredient;
+  final Ingredient ingredient;
   final double quantity;
   final String? measure;
 
