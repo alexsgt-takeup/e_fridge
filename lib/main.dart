@@ -1,4 +1,3 @@
-
 import 'package:e_fridge/blocs/recipe_list/recipe_list_bloc.dart';
 import 'package:e_fridge/pages/home_page.dart';
 import 'package:e_fridge/services/sqflite_service.dart';
@@ -7,7 +6,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 import 'repository/recipe_repository.dart';
-
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +23,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return RepositoryProvider(
       create: (context) => RecipeRepository(
         database: getIt<SqfliteService>().getDatabaseInstance(),
@@ -45,10 +42,9 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          home: HomePage(),
+          home: const HomePage(),
         ),
       ),
-
     );
   }
 }

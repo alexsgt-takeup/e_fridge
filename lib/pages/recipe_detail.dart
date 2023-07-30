@@ -25,7 +25,8 @@ class RecipeDetails extends StatelessWidget {
                 recipe.numberOfServings > 1
                     ? "Pour ${recipe.numberOfServings} personnes"
                     : "Pour ${recipe.numberOfServings} personne",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
             ),
           ],

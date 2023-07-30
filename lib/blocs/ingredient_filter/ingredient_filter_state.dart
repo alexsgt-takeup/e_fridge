@@ -7,6 +7,6 @@ class IngredientFilterState extends Equatable {
   List<Object> get props => [];
 
   factory IngredientFilterState.initial() {
-    return IngredientFilterState();
+    return const IngredientFilterState();
   }
 }
