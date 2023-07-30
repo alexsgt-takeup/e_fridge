@@ -1,3 +1,4 @@
+
 import 'package:e_fridge/blocs/recipe_list/recipe_list_bloc.dart';
 import 'package:e_fridge/pages/home_page.dart';
 import 'package:e_fridge/services/sqflite_service.dart';
@@ -7,11 +8,14 @@ import 'package:get_it/get_it.dart';
 
 import 'repository/recipe_repository.dart';
 
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final getIt = GetIt.instance;
+
   getIt.registerSingleton<SqfliteService>(SqfliteService());
   await getIt<SqfliteService>().init();
+
   runApp(MyApp());
 }
 
@@ -19,9 +23,9 @@ class MyApp extends StatelessWidget {
   final getIt = GetIt.instance;
   MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return RepositoryProvider(
       create: (context) => RecipeRepository(
         database: getIt<SqfliteService>().getDatabaseInstance(),
@@ -44,6 +48,7 @@ class MyApp extends StatelessWidget {
           home: HomePage(),
         ),
       ),
+
     );
   }
 }

@@ -4,6 +4,7 @@ class DatabaseConstants {
   static const int databaseVersion = 1;
 
   static const String createDatabaseQuery = '''
+
       CREATE TABLE IF NOT EXISTS recipes(id STRING PRIMARY KEY, name TEXT NOT NULL, number_of_servings INTEGER NOT NULL, img_path STRING); 
       CREATE TABLE IF NOT EXISTS ingredients(id STRING PRIMARY KEY, name TEXT NOT NULL); 
       CREATE TABLE IF NOT EXISTS recipes_ingredients(id STRING PRIMARY KEY, FOREIGN KEY(recipe_id) REFERENCES recipes(id), 
@@ -39,4 +40,5 @@ class DatabaseConstants {
   static const String recipesStepsColRecipeId = "recipe_id";
   static const String recipesStepsColOrder = "order";
   static const String recipesStepsColDescription = "description";
+
 }
