@@ -15,10 +15,9 @@ class RecipeDetails extends StatelessWidget {
           children: [
             Container(
               padding: const EdgeInsets.only(bottom: 8),
-              child: Text(
+              child: const Text(
                 "Nombre personne",
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
             ),
           ],
@@ -35,17 +34,15 @@ class RecipeDetails extends StatelessWidget {
           children: [
             Container(
               padding: const EdgeInsets.only(bottom: 8),
-              child: Column(
+              child: const Column(
                 children: [
                   Text(
                     "Ingredient 1",
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 20),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                   ),
                   Text(
                     "Ingredient 2",
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 20),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                   ),
                 ],
               ),
@@ -64,17 +61,15 @@ class RecipeDetails extends StatelessWidget {
           children: [
             Container(
               padding: const EdgeInsets.only(bottom: 8),
-              child: Column(
+              child: const Column(
                 children: [
                   Text(
                     "Step 1",
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 20),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                   ),
                   Text(
                     "Step 2",
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 20),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                   ),
                 ],
               ),
@@ -84,7 +79,7 @@ class RecipeDetails extends StatelessWidget {
       ]),
     );
 
-    Widget divider = Divider(
+    Widget divider = const Divider(
       height: 20,
       thickness: 0.5,
       indent: 40,
@@ -95,7 +90,7 @@ class RecipeDetails extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Text("Nom recette"),
+          title: const Text("Nom recette"),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
