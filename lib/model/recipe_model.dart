@@ -7,7 +7,7 @@ class Recipe {
   final String? imgPath;
   final List<RecipeIngredient> ingredients;
   final List<Step> steps;
-  final int personnQuantity;
+  final int numberOfServings;
 
   Recipe({
     required this.id,
@@ -15,6 +15,6 @@ class Recipe {
     this.imgPath,
     required this.ingredients,
     required this.steps,
-    required this.personnQuantity,
+    required this.numberOfServings,
   });
 }

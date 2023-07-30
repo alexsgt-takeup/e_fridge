@@ -33,9 +33,10 @@ List<Recipe> dummyRecipeList = [
         description: "Faire cuire à feu doux en remuant en continu",
       ),
     ],
-    personnQuantity: 1,
+
     imgPath:
         'https://img.cuisineaz.com/660x660/2016/04/28/i18845-oeufs-brouilles.jpg',
+    numberOfServings: 1,
   ),
   Recipe(
     id: "2",
@@ -66,9 +67,12 @@ List<Recipe> dummyRecipeList = [
         description: "Faire cuire à feu doux en remuant en continu",
       ),
     ],
-    personnQuantity: 1,
+
     imgPath:
         'https://img.cuisineaz.com/660x660/2016/04/28/i18845-oeufs-brouilles.jpg',
+
+    numberOfServings: 1,
+
   ),
   Recipe(
     id: "3",
@@ -99,8 +103,11 @@ List<Recipe> dummyRecipeList = [
         description: "Faire cuire à feu doux en remuant en continu",
       ),
     ],
-    personnQuantity: 4,
+
     imgPath:
         'https://img.cuisineaz.com/660x660/2016/04/28/i18845-oeufs-brouilles.jpg',
+
+    numberOfServings: 1,
+
   ),
 ];

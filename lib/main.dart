@@ -1,14 +1,21 @@
+import 'package:e_fridge/constants/db_constants.dart';
 import 'package:e_fridge/pages/home_page.dart';
+import 'package:e_fridge/repository/sqflite_repository.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 
-import 'pages/recipe_detail.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final getIt = GetIt.instance;
+  getIt.registerSingleton<SqfliteRepository>(SqfliteRepository());
+  await getIt<SqfliteRepository>().init();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final getIt = GetIt.instance;
+  MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +26,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+
       home: const HomePage(),
+
     );
   }
 }
