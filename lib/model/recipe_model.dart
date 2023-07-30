@@ -6,7 +6,7 @@ class Recipe {
   final String name;
   final String? imgPath;
   final List<RecipeIngredient> ingredients;
-  final List<Steps> steps;
+  final List<Step> steps;
   final int personnQuantity;
 
   Recipe({

@@ -22,12 +22,12 @@ List<Recipe> dummyRecipeList = [
       ),
     ],
     steps: [
-      Steps(
+      Step(
         id: "1",
         order: 1,
         description: "Mélanger les oeufs et le lait à l'aide d'un fouet",
       ),
-      Steps(
+      Step(
         id: "2",
         order: 2,
         description: "Faire cuire à feu doux en remuant en continu",
@@ -53,12 +53,12 @@ List<Recipe> dummyRecipeList = [
       ),
     ],
     steps: [
-      Steps(
+      Step(
         id: "1",
         order: 1,
         description: "Mélanger les oeufs et le lait à l'aide d'un fouet",
       ),
-      Steps(
+      Step(
         id: "2",
         order: 2,
         description: "Faire cuire à feu doux en remuant en continu",
@@ -84,12 +84,12 @@ List<Recipe> dummyRecipeList = [
       ),
     ],
     steps: [
-      Steps(
+      Step(
         id: "1",
         order: 1,
         description: "Mélanger les oeufs et le lait à l'aide d'un fouet",
       ),
-      Steps(
+      Step(
         id: "2",
         order: 2,
         description: "Faire cuire à feu doux en remuant en continu",
