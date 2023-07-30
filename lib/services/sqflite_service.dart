@@ -3,7 +3,7 @@ import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
 
-class SqfliteRepository {
+class SqfliteService {
   late Database _database;
 
   Future<void> init() async {
@@ -15,6 +15,10 @@ class SqfliteRepository {
       version: DatabaseConstants.databaseVersion,
       onCreate: _onCreate,
     );
+  }
+
+  Database getDatabaseInstance() {
+    return _database;
   }
 
   Future<void> _onCreate(Database db, int version) async {

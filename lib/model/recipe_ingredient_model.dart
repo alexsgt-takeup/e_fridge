@@ -1,6 +1,8 @@
+import 'package:e_fridge/model/ingredient_model.dart';
+
 class RecipeIngredient {
   final String id;
-  final String ingredient;
+  final Ingredient ingredient;
   final double quantity;
   final String? measure;
 
@@ -10,4 +12,12 @@ class RecipeIngredient {
     required this.quantity,
     this.measure,
   });
+
+  // RecipeIngredient fromMap(Map<String, dynamic> data) {
+  //   return RecipeIngredient(id: data[], recipeId: data[], ingredient: data[], quantity: data[]);
+  // }
+
+  // Map<String, dynamic> toMap() {
+  //   return {};
+  // }
 }

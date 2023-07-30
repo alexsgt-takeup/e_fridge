@@ -1,14 +1,18 @@
+import 'package:e_fridge/blocs/recipe_list/recipe_list_bloc.dart';
 import 'package:e_fridge/constants/db_constants.dart';
 import 'package:e_fridge/pages/home_page.dart';
-import 'package:e_fridge/repository/sqflite_repository.dart';
+import 'package:e_fridge/services/sqflite_service.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
+
+import 'repository/recipe_repository.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final getIt = GetIt.instance;
-  getIt.registerSingleton<SqfliteRepository>(SqfliteRepository());
-  await getIt<SqfliteRepository>().init();
+  getIt.registerSingleton<SqfliteService>(SqfliteService());
+  await getIt<SqfliteService>().init();
   runApp(MyApp());
 }
 
@@ -19,27 +23,27 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return RepositoryProvider(
+      create: (context) => RecipeRepository(
+        database: getIt<SqfliteService>().getDatabaseInstance(),
       ),
-      home: Scaffold(
-        floatingActionButton: IconButton(
-            onPressed: () async {
-              print(await getIt<SqfliteRepository>()
-                  .queryAllRows(DatabaseConstants.recipeTableName));
-              // Map<String, dynamic> row = {
-              //   DatabaseConstants.recipeColumnName: 'test',
-              //   DatabaseConstants.recipeColumnNumberOfServings: 4,
-              // };
-              // final id = await getIt<SqfliteRepository>()
-              //     .insert(DatabaseConstants.recipeTableName, row);
-              // debugPrint('inserted row id: $id');
-            },
-            icon: const Icon(Icons.add)),
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider<RecipeListBloc>(
+            create: (context) => RecipeListBloc(
+              recipeRepository: context.read<RecipeRepository>(),
+            ),
+          ),
+        ],
+        child: MaterialApp(
+          title: 'Flutter Demo',
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            useMaterial3: true,
+          ),
+          home: HomePage(),
+        ),
       ),
     );
   }

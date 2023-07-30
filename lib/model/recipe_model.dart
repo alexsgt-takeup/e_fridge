@@ -1,12 +1,12 @@
 import 'recipe_ingredient_model.dart';
-import 'step_model.dart';
+import 'recipe_step_model.dart';
 
 class Recipe {
   final String id;
   final String name;
   final String? imgPath;
   final List<RecipeIngredient> ingredients;
-  final List<Step> steps;
+  final List<RecipeStep> steps;
   final int numberOfServings;
 
   Recipe({
@@ -17,4 +17,12 @@ class Recipe {
     required this.steps,
     required this.numberOfServings,
   });
+
+  // Recipe fromMap(Map<String, dynamic> data) {
+  //   return Recipe();
+  // }
+
+  // Map<String, dynamic> toMap() {
+  //   return {};
+  // }
 }
