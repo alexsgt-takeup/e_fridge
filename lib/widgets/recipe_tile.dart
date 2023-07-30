@@ -28,7 +28,7 @@ class RecipeTile extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
           child: Text(
-              "${recipe.name} pour ${recipe.personnQuantity} personne(s)")),
+              "${recipe.name} pour ${recipe.numberOfServings} personne(s)")),
     );
   }
 }
