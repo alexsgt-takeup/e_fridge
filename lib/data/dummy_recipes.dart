@@ -1,8 +1,8 @@
-
+import 'package:e_fridge/model/ingredient_model.dart';
 import 'package:e_fridge/model/recipe_ingredient_model.dart';
-import 'package:e_fridge/model/steps_model.dart';
 
 import '../model/recipe_model.dart';
+import '../model/recipe_step_model.dart';
 
 List<Recipe> dummyRecipeList = [
   Recipe(
@@ -11,30 +11,29 @@ List<Recipe> dummyRecipeList = [
     ingredients: [
       RecipeIngredient(
         id: "1",
-        ingredient: "oeufs",
+        ingredient: Ingredient(id: "1", name: "Oeufs"),
         quantity: 4,
         measure: null,
       ),
       RecipeIngredient(
         id: "2",
-        ingredient: "lait",
+        ingredient: Ingredient(id: "2", name: "Lait"),
         quantity: 10,
         measure: "cl",
       ),
     ],
     steps: [
-      Step(
+      RecipeStep(
         id: "1",
         order: 1,
         description: "Mélanger les oeufs et le lait à l'aide d'un fouet",
       ),
-      Step(
+      RecipeStep(
         id: "2",
         order: 2,
         description: "Faire cuire à feu doux en remuant en continu",
       ),
     ],
-
     imgPath:
         'https://img.cuisineaz.com/660x660/2016/04/28/i18845-oeufs-brouilles.jpg',
     numberOfServings: 1,
@@ -45,35 +44,32 @@ List<Recipe> dummyRecipeList = [
     ingredients: [
       RecipeIngredient(
         id: "1",
-        ingredient: "oeufs",
+        ingredient: Ingredient(id: "1", name: "Oeufs"),
         quantity: 4,
         measure: null,
       ),
       RecipeIngredient(
         id: "2",
-        ingredient: "lait",
+        ingredient: Ingredient(id: "2", name: "Lait"),
         quantity: 10,
         measure: "cl",
       ),
     ],
     steps: [
-      Step(
+      RecipeStep(
         id: "1",
         order: 1,
         description: "Mélanger les oeufs et le lait à l'aide d'un fouet",
       ),
-      Step(
+      RecipeStep(
         id: "2",
         order: 2,
         description: "Faire cuire à feu doux en remuant en continu",
       ),
     ],
-
     imgPath:
         'https://img.cuisineaz.com/660x660/2016/04/28/i18845-oeufs-brouilles.jpg',
-
     numberOfServings: 1,
-
   ),
   Recipe(
     id: "3",
@@ -81,35 +77,31 @@ List<Recipe> dummyRecipeList = [
     ingredients: [
       RecipeIngredient(
         id: "1",
-        ingredient: "oeufs",
+        ingredient: Ingredient(id: "1", name: "Oeufs"),
         quantity: 4,
         measure: null,
       ),
       RecipeIngredient(
         id: "2",
-        ingredient: "lait",
+        ingredient: Ingredient(id: "2", name: "Lait"),
         quantity: 10,
         measure: "cl",
       ),
     ],
     steps: [
-      Step(
+      RecipeStep(
         id: "1",
         order: 1,
         description: "Mélanger les oeufs et le lait à l'aide d'un fouet",
       ),
-      Step(
+      RecipeStep(
         id: "2",
         order: 2,
         description: "Faire cuire à feu doux en remuant en continu",
       ),
     ],
-
     imgPath:
         'https://img.cuisineaz.com/660x660/2016/04/28/i18845-oeufs-brouilles.jpg',
-
     numberOfServings: 1,
-
   ),
 ];
-
