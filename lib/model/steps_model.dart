@@ -1,9 +1,9 @@
-class Step {
+class Steps {
   final String id;
   final int order;
   final String description;
 
-  Step({
+  Steps({
     required this.id,
     required this.order,
     required this.description,
