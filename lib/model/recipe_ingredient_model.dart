@@ -12,12 +12,4 @@ class RecipeIngredient {
     required this.quantity,
     this.measure,
   });
-
-  // RecipeIngredient fromMap(Map<String, dynamic> data) {
-  //   return RecipeIngredient(id: data[], recipeId: data[], ingredient: data[], quantity: data[]);
-  // }
-
-  // Map<String, dynamic> toMap() {
-  //   return {};
-  // }
 }

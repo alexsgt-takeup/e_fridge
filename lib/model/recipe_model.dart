@@ -17,12 +17,4 @@ class Recipe {
     required this.steps,
     required this.numberOfServings,
   });
-
-  // Recipe fromMap(Map<String, dynamic> data) {
-  //   return Recipe();
-  // }
-
-  // Map<String, dynamic> toMap() {
-  //   return {};
-  // }
 }

@@ -1,5 +1,4 @@
 import 'package:e_fridge/blocs/recipe_list/recipe_list_bloc.dart';
-import 'package:e_fridge/constants/db_constants.dart';
 import 'package:e_fridge/pages/home_page.dart';
 import 'package:e_fridge/services/sqflite_service.dart';
 import 'package:flutter/material.dart';
