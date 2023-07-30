@@ -1,5 +1,5 @@
 import 'package:e_fridge/model/recipe_ingredient_model.dart';
-import 'package:e_fridge/model/step_model.dart';
+import 'package:e_fridge/model/steps_model.dart';
 
 import '../model/recipe_model.dart';
 
@@ -33,6 +33,9 @@ List<Recipe> dummyRecipeList = [
         description: "Faire cuire à feu doux en remuant en continu",
       ),
     ],
+
+    imgPath:
+        'https://img.cuisineaz.com/660x660/2016/04/28/i18845-oeufs-brouilles.jpg',
     numberOfServings: 1,
   ),
   Recipe(
@@ -64,7 +67,12 @@ List<Recipe> dummyRecipeList = [
         description: "Faire cuire à feu doux en remuant en continu",
       ),
     ],
+
+    imgPath:
+        'https://img.cuisineaz.com/660x660/2016/04/28/i18845-oeufs-brouilles.jpg',
+
     numberOfServings: 1,
+
   ),
   Recipe(
     id: "3",
@@ -95,6 +103,11 @@ List<Recipe> dummyRecipeList = [
         description: "Faire cuire à feu doux en remuant en continu",
       ),
     ],
+
+    imgPath:
+        'https://img.cuisineaz.com/660x660/2016/04/28/i18845-oeufs-brouilles.jpg',
+
     numberOfServings: 1,
+
   ),
 ];

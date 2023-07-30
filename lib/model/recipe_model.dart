@@ -1,5 +1,5 @@
 import 'recipe_ingredient_model.dart';
-import 'step_model.dart';
+import 'steps_model.dart';
 
 class Recipe {
   final String id;
