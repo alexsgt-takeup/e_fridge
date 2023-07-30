@@ -1,8 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
+import '../model/recipe_model.dart';
+
 class RecipeDetails extends StatelessWidget {
-  const RecipeDetails({super.key});
+  final Recipe recipe;
+  const RecipeDetails({
+    Key? key,
+    required this.recipe,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +21,10 @@ class RecipeDetails extends StatelessWidget {
           children: [
             Container(
               padding: const EdgeInsets.only(bottom: 8),
-              child: const Text(
-                "Nombre personne",
+              child: Text(
+                recipe.personnQuantity > 1
+                    ? "Pour ${recipe.personnQuantity} personnes"
+                    : "Pour ${recipe.personnQuantity} personne",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
             ),
@@ -90,7 +98,7 @@ class RecipeDetails extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: const Text("Nom recette"),
+          title: Text(recipe.name),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
@@ -100,10 +108,9 @@ class RecipeDetails extends StatelessWidget {
         body: ListView(
           children: [
             Hero(
-              tag: "imagerecipe${"recipe.name"}",
+              tag: "imagerecipe${recipe.name}",
               child: CachedNetworkImage(
-                imageUrl:
-                    "https://img.cuisineaz.com/660x660/2016/04/28/i18845-oeufs-brouilles.jpg",
+                imageUrl: recipe.imgPath ?? "",
                 placeholder: (context, url) =>
                     const Center(child: CircularProgressIndicator()),
                 errorWidget: (context, url, error) => const Icon(

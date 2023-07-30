@@ -32,8 +32,7 @@ class _HomePageState extends State<HomePage> {
             itemCount: dummyRecipeList.length,
             itemBuilder: (context, index) {
               return RecipeTile(
-                recipeName: dummyRecipeList[index].name,
-                recipePerson: dummyRecipeList[index].personnQuantity,
+                recipe: dummyRecipeList[index],
               );
             }),
       ),
