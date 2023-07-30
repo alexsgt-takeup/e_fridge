@@ -1,4 +1,4 @@
-import 'package:e_fridge/pages/recipe_detail.dart';
+import 'package:e_fridge/pages/recipe_detail_page.dart';
 import 'package:flutter/material.dart';
 
 import '../model/recipe_model.dart';
@@ -18,7 +18,7 @@ class RecipeTile extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: ((context) => RecipeDetails(recipe: recipe))));
+                builder: ((context) => RecipeDetailPage(recipe: recipe))));
       },
       child: Container(
           margin: const EdgeInsets.all(10),
