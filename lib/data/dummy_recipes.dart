@@ -33,7 +33,7 @@ List<Recipe> dummyRecipeList = [
         description: "Faire cuire à feu doux en remuant en continu",
       ),
     ],
-    personnQuantity: 1,
+    numberOfServings: 1,
   ),
   Recipe(
     id: "2",
@@ -64,7 +64,7 @@ List<Recipe> dummyRecipeList = [
         description: "Faire cuire à feu doux en remuant en continu",
       ),
     ],
-    personnQuantity: 1,
+    numberOfServings: 1,
   ),
   Recipe(
     id: "3",
@@ -95,6 +95,6 @@ List<Recipe> dummyRecipeList = [
         description: "Faire cuire à feu doux en remuant en continu",
       ),
     ],
-    personnQuantity: 1,
+    numberOfServings: 1,
   ),
 ];
