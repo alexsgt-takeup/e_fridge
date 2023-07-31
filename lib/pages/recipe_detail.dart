@@ -22,10 +22,11 @@ class RecipeDetails extends StatelessWidget {
             Container(
               padding: const EdgeInsets.only(bottom: 8),
               child: Text(
-                recipe.personnQuantity > 1
-                    ? "Pour ${recipe.personnQuantity} personnes"
-                    : "Pour ${recipe.personnQuantity} personne",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                recipe.numberOfServings > 1
+                    ? "Pour ${recipe.numberOfServings} personnes"
+                    : "Pour ${recipe.numberOfServings} personne",
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
             ),
           ],

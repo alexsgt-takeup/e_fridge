@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.green,
         child: const Icon(Icons.add),
       ),
-      body: Container(
+      body: SizedBox(
         width: MediaQuery.of(context).size.width,
         child: ListView.builder(
             shrinkWrap: true,
