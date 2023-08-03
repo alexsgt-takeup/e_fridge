@@ -8,12 +8,11 @@ void main() async {
   final getIt = GetIt.instance;
   getIt.registerSingleton<SqfliteRepository>(SqfliteRepository());
   await getIt<SqfliteRepository>().init();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final getIt = GetIt.instance;
-  MyApp({super.key});
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {

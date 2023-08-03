@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:e_fridge/model/recipe_ingredient_model.dart';
 import 'package:flutter/material.dart';
 
 import '../model/recipe_model.dart';
@@ -34,59 +35,26 @@ class RecipeDetails extends StatelessWidget {
       ]),
     );
 
-    Widget ingredientsSection = Container(
-      padding: const EdgeInsets.all(32),
-      child: Row(children: [
-        Expanded(
-            child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: const Column(
-                children: [
-                  Text(
-                    "Ingredient 1",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                  ),
-                  Text(
-                    "Ingredient 2",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        )),
-      ]),
-    );
+    Widget ingredientsSection = Column(children: [
+      ListView.builder(
+          shrinkWrap: true,
+          itemCount: recipe.ingredients.length,
+          itemBuilder: (context, index) {
+            return Text(recipe.ingredients[index].measure != null
+                ? "${recipe.ingredients[index].quantity.round()} ${recipe.ingredients[index].measure} de ${recipe.ingredients[index].ingredient}"
+                : "${recipe.ingredients[index].quantity.round()} ${recipe.ingredients[index].ingredient}");
+          })
+    ]);
 
-    Widget stepsSection = Container(
-      padding: const EdgeInsets.all(32),
-      child: Row(children: [
-        Expanded(
-            child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: const Column(
-                children: [
-                  Text(
-                    "Step 1",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                  ),
-                  Text(
-                    "Step 2",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        )),
-      ]),
-    );
+    Widget stepsSection = Column(children: [
+      ListView.builder(
+          shrinkWrap: true,
+          itemCount: recipe.steps.length,
+          itemBuilder: (context, index) {
+            return Text(
+                "Etape ${recipe.steps[index].order} : ${recipe.steps[index].description}");
+          })
+    ]);
 
     Widget divider = const Divider(
       height: 20,
